@@ -11,6 +11,10 @@ namespace KingArthur
         }
         public int FindBestKnight()
         {
+            if (numberOfKnights <= 0)
+            {
+                throw new InvalidOperationException();
+            }
             int[] nums = new int[numberOfKnights];
             int left = numberOfKnights;
             bool leave = true;
