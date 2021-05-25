@@ -18,7 +18,7 @@ namespace KingArthurTest
                 int answer = app.FindBestKnight();
                 Assert.Fail();
             }
-            catch (IndexOutOfRangeException)
+            catch (InvalidOperationException)
             {
             }
         }
