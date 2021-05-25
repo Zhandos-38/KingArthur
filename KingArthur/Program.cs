@@ -3,7 +3,7 @@
 namespace KingArthur
 {
     public class KnightApp
-    {
+    { 
         private int numberOfKnights;
         public KnightApp(int num)
         {

@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using KingArthur;
-
+using System;
 namespace KingArthurTest
 {
     [TestClass]
@@ -10,14 +10,17 @@ namespace KingArthurTest
         public void Testing()
         {
             //Arrange
-            int testNumberOfKnights = 20;
-            int expected = 9;
-            KnightApp app = new KnightApp(testNumberOfKnights); 
+            int testNumberOfKnights = 0;
+            KnightApp app = new KnightApp(testNumberOfKnights);
             //Act
-            int answer = app.FindBestKnight();
-
-            //Assert
-            Assert.AreEqual(expected, answer);
+            try
+            {
+                int answer = app.FindBestKnight();
+                Assert.Fail();
+            }
+            catch (IndexOutOfRangeException)
+            {
+            }
         }
     }
 }
