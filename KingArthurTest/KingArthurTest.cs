@@ -7,7 +7,7 @@ namespace KingArthurTest
     public class KingArthurTest
     {
         [TestMethod]
-        public void Testing()
+        public void TestFor0()
         {
             //Arrange
             int testNumberOfKnights = 0;
@@ -21,6 +21,19 @@ namespace KingArthurTest
             catch (IndexOutOfRangeException)
             {
             }
+        }
+        [TestMethod]
+        public void TestForNormalNumber()
+        {
+            //Arrange
+            int testNumberOfKnights = 20;
+            int expected = 9;
+            KnightApp app = new KnightApp(testNumberOfKnights);
+            //Act
+            int answer = app.FindBestKnight();
+
+            //Assert
+            Assert.AreEqual(expected, answer);
         }
     }
 }
